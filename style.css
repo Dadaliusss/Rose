@@ -1,0 +1,94 @@
+/* General styles */
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(120deg, #1c3d47, #0d0d0d); /* Bluish teal and black gradient */
+    color: #fff; /* White text for contrast */
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+  }
+  
+  /* Static stars in the background */
+  #stars {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  .star {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.7;
+  }
+  
+  /* Welcome message */
+  #welcome {
+    font-family: 'Indie Flower', cursive;
+    font-size: 38px;
+    color: #ff69b4; /* Pink for a soft greeting */
+    opacity: 0;
+    transition: opacity 4s ease-in-out; /* Smooth and longer transition */
+  }
+  
+  /* Box styles */
+  #box {
+    margin: 30px auto;
+    width: 200px;
+    height: 200px;
+    background-color: #ff69b4; /* Pink box */
+    color: #fff;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: transform 0.5s, box-shadow 0.5s;
+  }
+  
+  #box:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px 2px #ff69b4; /* Pink hover effect */
+  }
+  
+  /* Rose animation */
+  #rose {
+    margin-top: 20px;
+    display: none;
+    font-size: 64px;
+    animation: float 3s infinite ease-in-out;
+    cursor: pointer;
+  }
+  
+  #sentences, #clickPrompt, #extraContent {
+    display: none;
+    font-family: 'Dancing Script', cursive;
+    color: #ff69b4; /* Pink text */
+    margin-top: 20px;
+  }
+  
+  /* Extra content styles */
+  #extraContent {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+  }
+  
+  /* Animation for the floating rose */
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+  }
+  
